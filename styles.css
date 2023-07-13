@@ -1,0 +1,321 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+
+:root {
+    --main-colour: rgb(228, 131, 221);
+    --secondary: rgb(147, 110, 255);
+}
+
+/* background and body */
+* {
+    box-sizing: border-box;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+html {
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+body {
+    min-height: 100%;
+    margin: 0px;
+    padding: 0;
+    background-color: rgb(30, 30, 30);
+}
+
+/* letter formating */
+.line {
+    min-height: 10px;
+    background: rgb(24, 24, 24)
+}
+.line > h1 {
+    margin: 5px 0 5px 18px;
+}
+h1,h2,h3,h4 {
+    margin: 0 0 3px 0;
+}
+.paragraph {
+    margin: 18px;
+}
+.title {
+    font-family: 'Merriweather', serif;
+    font-weight: 400;
+    font-size: 400%;
+    margin: 20px;
+    color: var(--main-colour);
+}
+.coloured {
+    color: var(--secondary);
+}
+.paragraph > a {
+    font-family: 'Merriweather', serif;
+    font-weight: 400;
+    font-size: 200%;
+    color: var(--main-colour);
+}
+.dictionary, .dict-single {
+    margin: 20px;
+}
+.dictionary {
+    display:flex;
+    flex-wrap: wrap;
+}
+.dict-single {
+    width: 40vw;
+}
+.word {
+    font-size: 300%;
+    margin-bottom: 0;
+    color: rgb(255, 120, 163)
+}
+.pronun-type {
+    font-family: sans-serif;
+    color: rgb(97, 97, 97);
+    margin-bottom: 10px;
+}
+.subtitle {
+    font-family: 'Merriweather', serif;
+    font-weight: 400;
+    font-size: 300%;
+    margin-top: 20px;
+}
+.extra {
+    font-family: sans-serif;
+    color: rgb(97, 97, 97);
+}
+.symbols {
+    font-family: sans-serif;
+    margin: 10px;
+    color: rgb(97, 97, 97);
+    font-size:160%;
+}
+
+/* images */
+.galary {
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.galary > img {
+    max-height: 40vh;
+    background: white;
+}
+
+/* header bar */
+.top-header {
+    height: 12vh;
+    width: 100%;
+    align-items: center;
+    position: sticky;
+    display:flex;
+    z-index: 90;
+    background-color: rgb(21, 21, 21);
+    top: 0;
+}
+a > img {
+    height:10vh;
+    width:10vh;
+    border-radius: 50%;
+    transition: .1s;
+    
+}
+.top-header > a {
+    left:12px;
+    z-index: 99;
+    position:relative;
+}
+a:hover > img {
+    transform: scale(1.1);
+}
+.center {
+    height: 12vh;
+    width:100%;
+    position:absolute;
+    top:0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+.center > span {
+    margin-left: 3%;
+    margin-right: 3%;
+    font-size: 250%;
+}
+.center > span > a {
+    font-weight: 400 !important;
+    transition: font-size 300ms, font-weight 0s ease-out;
+}
+.center > span > a:link {
+    text-decoration: none;
+}
+.center > span > a:visited {
+    text-decoration: none;
+}
+.center > span > a:hover {
+    text-decoration: none;
+    font-size: 120%;
+    font-weight: 600!important;
+}
+.center > span > a:active {
+    text-decoration: none;
+    font-size: 120%;
+    font-weight: 600!important;
+}
+
+/* for inputs */
+input[type=text], .btn {
+    z-index:1;
+    position:relative;
+    font-size:22px;
+    padding: 4px 3px;
+    margin: 2px 1px;
+    background:rgb(49, 49, 49);
+    background-image:none;
+    border: 2px solid black;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-radius: 5px;
+    color:white;
+    transition: .25s ease;
+    &:focus {
+        outline: 0;
+        background: rgba(183, 92, 177, 0.3);
+        border-color: var(--main-colour);
+    }
+}
+
+/* for buttons */
+.btn {
+    background-color: var(--main-colour);
+    transition: 50ms;
+}
+.btn:active {
+    background-color: rgb(108, 54, 105);
+    transform: scale(0.95);
+}
+
+/* for toggleable text */
+.switch {
+    position: relative;
+    display: inline-block;
+}
+.switch input {
+    width: 0;
+    height: 0;
+    position:relative;
+    left:1px;
+}
+.character {
+    font-size: 130%;
+    cursor: pointer;
+    transition: .2s;
+    color: rgb(89, 89, 89);
+    margin: 0px 6px 0px 0px;
+}
+input:checked + .character {
+    color: rgb(255, 255, 255);
+}
+
+/* for checkboxes */
+.check {
+    min-width:10px;
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    user-select: none;
+    border-radius:50%;
+}
+.check input {
+    width: 0;
+    height: 0;
+    position:relative;
+}
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius:50%;
+}
+.check:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+.check input:checked ~ .checkmark {
+    background-color: var(--main-colour);
+}
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+.check input:checked ~ .checkmark:after {
+    display: block;
+}
+.check .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
+
+/* tables and matrixes */
+.array {
+    margin: 18px;
+}
+table {
+    padding:3px;
+}
+table, th, td {
+    border: 1px solid white;
+    background: rgb(29, 29, 29);
+    border-radius: 5px;
+}
+th,td {
+    padding: 1px 3px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    font-size: 130%;
+    text-align: center;
+}
+td {
+    min-width: 60px;
+    font-family: sans-serif;
+    color: rgb(44, 44, 44);
+}
+.select {
+    color:rgb(189, 189, 189) !important;
+    font-family: sans-serif;
+}
+th {
+    background: rgb(23, 23, 23);
+    font-size: 130%;
+    font-weight: 500;
+}
+th.title-text {
+    font-size: 200%;
+    font-weight: 400;
+}
+td.empty {
+    border: 0px;
+}
+.grammar > tbody > tr > td {
+    color:rgb(189, 189, 189) !important;
+}
+.bold {
+    font-weight: 500;
+    color: var(--secondary)
+}
